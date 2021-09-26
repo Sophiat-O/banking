@@ -1,17 +1,13 @@
 package com.company;
-//import java.util.ArrayList;
 import  java.util.Random;
 
 public class Account {
-    private Customer accountName;
-    private Customer customerID;
-    //ArrayList<Integer> accountNumber;
+    private Customer customer;
     private String accountStatus;
-    private double accountBalance;
+    private float accountBalance;
 
-    public Account(Customer _customerID, Customer _accountName, String _accountStatus, double _accountBalance){
-        this.accountName = _accountName;
-        this.customerID = _customerID;
+    public Account(Customer _customer, String _accountStatus, float _accountBalance){
+        this.customer = _customer;
         this.accountStatus = _accountStatus;
         this.accountBalance = _accountBalance;
 
@@ -39,29 +35,29 @@ public class Account {
 
         }
 
-        // Converting the concatenating string into numbers
+        // Converting the concatenated string into numbers
         long accountNumber = Long.parseLong(generatedAccountNumber.toString());
-
 
         return  accountNumber;
 
     }
 
-
-
-    Customer getAccountName(){
-        return accountName;
+    String getAccountName(){
+        //this.customer.getName();
+        return this.customer.getName();
     }
 
-    Customer getCusID(){
-        return customerID;
+    int getCusID(){
+        //this.customer.getName();
+        return this.customer.getCustomerID();
     }
+
 
     String getAccountStatus(){
         return accountStatus;
     }
 
-    double getAccountBalance(){
+    float getAccountBalance(){
         return accountBalance;
     }
 
