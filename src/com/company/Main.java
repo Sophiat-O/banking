@@ -28,10 +28,12 @@ public class Main {
 
         Customer cus1 = new Customer(customerID, name, address);
 
-        Account cusAcc1 = new Account(cus1,cus1, "Open",0);
+        Account cusAcc1 = new Account(cus1, "Open",0);
+
+        long accountNumber = cusAcc1.getAccountNumber();
 
         System.out.println("This is your customer details: " + name + " , Address: " + address);
-        System.out.println("This is your AccountNumber: "+ cusAcc1.getAccountNumber());
+        System.out.println("This is your AccountNumber: "+ accountNumber);
         System.out.println("This is your AccountName: "+ cusAcc1.getAccountName());
 
         // generate random 10-digit number for the Account Number
